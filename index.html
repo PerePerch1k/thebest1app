@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TheBest1 App</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+            padding-top: 50px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+            font-family: cursive;
+            font-weight: normal;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .counter {
+            font-size: 36px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TheBest1 App</h1>
+        <p>Welcome to TheBest1 App! Join our vibrant community on Discord for exclusive content, real-time updates, and engaging discussions. Connect with fellow users, share tips, and stay up-to-date with all things related to TheBest1. Let's build something amazing together!</p>
+        <p style="font-weight:bold; text-align:justify;">Stay tuned for exciting announcements, engaging events, and interactive activities galore on TheBest1 Discord Server! From exclusive sneak peeks and major updates to lively discussions and fun challenges, there's always something happening. Join us for product launches, AMA sessions with experts, themed contests, and much more. Our diverse range of activities ensures there's something for everyone, whether you're seeking to learn, connect, or simply have a good time. Don't miss out on the opportunity to be part of our dynamic community and stay informed and entertained with TheBest1 Discord Server!</p>
+        <a href="https://discord.gg/9YBPcNQnwY" class="button">Join our Discord Server!</a>
+        <a href="https://forms.gle/kp3wTsNTiCHRZwLs9" class="button">Feedback/Suggest</a>
+        <a href="tictactoe.html" class="button">Play some tic tac toe!</a>
+        <h1>Some useful stuff</h1>
+        <h3>Counter</h3>
+        <div class="counter">000</div>
+        <button class="button" onclick="increaseCounter()">+</button>
+        <button class="button" onclick="decreaseCounter()">-</button>
+        <button class="button" onclick="resetCounter()">Reset</button>
+</div>
+
+    <script>
+        let count = 0;
+        const counter = document.querySelector('.counter');
+
+        const updateCounter = () => {
+            counter.textContent = padNumber(count);
+        };
+
+        const padNumber = (num) => {
+            return num.toString().padStart(3, '0');
+        };
+
+        const increaseCounter = () => {
+            count++;
+            updateCounter();
+        };
+
+        const decreaseCounter = () => {
+            count--;
+            updateCounter();
+        };
+
+        const resetCounter = () => {
+            count = 0;
+            updateCounter();
+        };
+
+        updateCounter();
+    </script>
+</body>
+</html>
